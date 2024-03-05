@@ -30,17 +30,15 @@ df.drop(['index'], axis = 1, inplace = True)
 df.dropna(inplace = True)
 
 #delets unnecessary columns
-df = df.drop(columns=['AGE'])
-df = df.drop(columns = ['Min', 'Max'])
 df = df.drop(columns = ['Descriptio'])
 df = df.drop(columns = ['DTHHRDY'])
 
 #transforms from object to int expression levels
-for colonna in df.columns:
-  if colonna == 'SEX':
-    df = df.astype({colonna:'int64'})
+for col in df.columns:
+  if col  == 'SEX' or col == 'AGE':
+    df = df.astype({col :'int64'})
   else:
-    df = df.astype({colonna:'float64'})
+    df = df.astype({col :'float64'})
 
 #selects gene columns
 genes = df.loc[:, ~df_copy.columns.isin(['SEX')]
