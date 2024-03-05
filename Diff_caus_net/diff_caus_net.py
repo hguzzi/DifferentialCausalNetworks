@@ -1,3 +1,4 @@
+#Main function to perform causal disovery and differential causal networks
 import sys
 def main():
     #install gcastle 
