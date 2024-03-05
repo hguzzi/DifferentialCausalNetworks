@@ -1,1 +1,5 @@
-
+1 = males 
+2 = females
+12 = males - females
+21 = females - males 
+sim = symmetric difference
