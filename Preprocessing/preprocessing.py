@@ -1,3 +1,4 @@
+#Preprocessing phase applied to excel file to obtain csv file with selected genes. 
 import pandas as pd
 df = pd.DataFrame(pd.read_excel("file_name.xlsx"))
 
