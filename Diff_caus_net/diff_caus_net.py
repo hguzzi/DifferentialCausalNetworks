@@ -19,6 +19,7 @@ def main():
     import pandas as pd
     df = pd.read_csv(df_name)
     df = df.drop('Unnamed: 0', axis=1)
+    df = df.drop('AGE', axis=1)
     
     #splitts the dataset in male data and female data
     df1 = df.copy()
